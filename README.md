@@ -60,6 +60,7 @@ This repository focuses on strengthening the ability to:
 * `SELECT`
 * `WHERE`
 * `ORDER BY`
+* `TOP`
 * `DISTINCT`
 * `CASE WHEN`
 * Aggregate Functions
@@ -99,6 +100,7 @@ This repository focuses on strengthening the ability to:
 
 ### Analytical SQL
 
+* Top-N
 * Top-N per Group
 * First / Last Record
 * Duplicate Detection
@@ -129,12 +131,10 @@ Data-Engineering-SQL-Patterns/
 │
 ├── README.md
 │
-├── 001-problem-name.sql
-├── 002-problem-name.sql
-├── 003-problem-name.sql
-├── ...
+├── 001-top-store-for-movie-sales.sql
+├── 002-top-3-movie-categories-by-sales.sql
 │
-└── N-problem-name.sql
+└── ...
 ```
 
 Each problem is stored as an independent `.sql` file.
@@ -148,9 +148,9 @@ XXX-problem-name.sql
 Example:
 
 ```text
-001-top-customers-by-revenue.sql
-002-latest-record-per-customer.sql
-003-consecutive-events.sql
+001-top-store-for-movie-sales.sql
+002-top-3-movie-categories-by-sales.sql
+003-next-problem-name.sql
 ```
 
 ---
@@ -161,43 +161,73 @@ Each solution follows a consistent format:
 
 ```sql
 /*
-===============================================================================
-Problem: Problem Name
-Source: SQLPad
-Difficulty: Medium
-Category: Window Functions
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    DATA ENGINEERING SQL PATTERNS                           ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║ Problem    : Problem Name                                                   ║
+║ Source     : SQLPad                                                        ║
+║ Difficulty : Medium                                                        ║
+║ Category   : Window Functions                                               ║
+╚══════════════════════════════════════════════════════════════════════════════╝
 
-Problem Statement:
-  ...
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📌 PROBLEM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Approach:
-  ...
+Problem statement...
 
-Key SQL Concepts:
-  ...
-===============================================================================
+🎯 REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ...
+2. ...
+3. ...
+
+🧠 APPROACH
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ...
+2. ...
+3. ...
+
+🔑 SQL PATTERN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SQL Pattern
+
+💻 VERIFIED SOLUTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 */
-
--- Verified Solution Query
 
 SELECT ...
 ```
 
-This keeps each problem understandable as a standalone SQL exercise and makes the repository useful as a future SQL pattern reference.
+This keeps every problem understandable as a standalone SQL exercise and makes the repository useful as a future SQL pattern reference.
 
 ---
 
 ## 📊 Progress
 
+### Overall Progress
+
+**2 / 230 Problems Solved**
+
+**Progress: 0.87%**
+
 | Metric          |  Progress |
 | --------------- | --------: |
-| Problems Solved |         0 |
-| Easy            |         0 |
-| Medium          |         0 |
-| Hard            |         0 |
+| Problems Solved |     **2** |
+| Easy            |     **2** |
+| Medium          |     **0** |
+| Hard            |     **0** |
 | Status          | 🟢 Active |
 
-> Progress will be updated continuously as problems are solved.
+### Completed Problems
+
+|   # | Problem                         | Difficulty | Main Pattern              |
+| --: | ------------------------------- | ---------- | ------------------------- |
+| 001 | Top Store for Movie Sales       | 🟢 Easy    | `MAX()` + Scalar Subquery |
+| 002 | Top 3 Movie Categories by Sales | 🟢 Easy    | `TOP` + `ORDER BY`        |
 
 ---
 
@@ -347,6 +377,6 @@ Focused on:
 
 ### 🚀 Building reusable SQL patterns for real-world Data Engineering.
 
-**Data Engineering SQL Patterns**
+**2 Problems Solved • 0.87% Complete**
 
 </div>
