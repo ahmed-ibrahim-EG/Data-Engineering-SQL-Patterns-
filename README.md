@@ -133,6 +133,9 @@ Data-Engineering-SQL-Patterns/
 │
 ├── 001-top-store-for-movie-sales.sql
 ├── 002-top-3-movie-categories-by-sales.sql
+├── 003-top-5-shortest-movies.sql
+├── 005-monthly-revenue.sql
+├── 007-unique-customers-count-by-month.sql
 │
 └── ...
 ```
@@ -150,7 +153,7 @@ Example:
 ```text
 001-top-store-for-movie-sales.sql
 002-top-3-movie-categories-by-sales.sql
-003-next-problem-name.sql
+003-top-5-shortest-movies.sql
 ```
 
 ---
@@ -210,24 +213,27 @@ This keeps every problem understandable as a standalone SQL exercise and makes t
 
 ### Overall Progress
 
-**2 / 230 Problems Solved**
+**5 / 230 Problems Solved**
 
-**Progress: 0.87%**
+**Progress: 2.17%**
 
 | Metric          |  Progress |
 | --------------- | --------: |
-| Problems Solved |     **2** |
-| Easy            |     **2** |
+| Problems Solved |     **5** |
+| Easy            |     **5** |
 | Medium          |     **0** |
 | Hard            |     **0** |
 | Status          | 🟢 Active |
 
 ### Completed Problems
 
-|   # | Problem                         | Difficulty | Main Pattern              |
-| --: | ------------------------------- | ---------- | ------------------------- |
-| 001 | Top Store for Movie Sales       | 🟢 Easy    | `MAX()` + Scalar Subquery |
-| 002 | Top 3 Movie Categories by Sales | 🟢 Easy    | `TOP` + `ORDER BY`        |
+|   # | Problem                         | Difficulty | Main Pattern                           |
+| --: | ------------------------------- | ---------- | -------------------------------------- |
+| 001 | Top Store for Movie Sales       | 🟢 Easy    | `MAX()` + Scalar Subquery              |
+| 002 | Top 3 Movie Categories by Sales | 🟢 Easy    | `TOP` + `ORDER BY`                     |
+| 003 | Top 5 Shortest Movies           | 🟢 Easy    | `ORDER BY` + `LIMIT`                   |
+| 005 | Monthly Revenue                 | 🟢 Easy    | `SUM()` + `GROUP BY` + Date Extraction |
+| 007 | Unique Customers Count by Month | 🟢 Easy    | `COUNT(DISTINCT)` + `GROUP BY`         |
 
 ---
 
@@ -354,9 +360,10 @@ Next step:
 ## 🛠️ Tech Stack
 
 * **SQL**
+* **PostgreSQL**
+* **SQLPad**
 * **Microsoft SQL Server / T-SQL**
 * **SSMS**
-* **SQLPad**
 * **Git & GitHub**
 
 ---
@@ -377,6 +384,6 @@ Focused on:
 
 ### 🚀 Building reusable SQL patterns for real-world Data Engineering.
 
-**2 Problems Solved • 0.87% Complete**
+**5 Problems Solved • 2.17% Complete**
 
 </div>
