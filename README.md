@@ -2,18 +2,19 @@
 
 # ⚡ Data Engineering SQL Patterns
 
-### *Practical SQL Patterns for Data Engineering, Analytics & Data Transformation*
+### *Practical SQL Practice for Data Engineering*
+
+**SQLPad Problems • PostgreSQL • Data Engineering Patterns**
 
 <p align="center">
-  <a href="#-overview">Overview</a> •
-  <a href="#-objectives">Objectives</a> •
-  <a href="#-sql-patterns">SQL Patterns</a> •
-  <a href="#-repository-structure">Structure</a> •
+  <a href="#-about">About</a> •
   <a href="#-progress">Progress</a> •
-  <a href="#-engineering-applications">Engineering Applications</a>
+  <a href="#-problems">Problems</a> •
+  <a href="#-sql-patterns">SQL Patterns</a> •
+  <a href="#-repository-structure">Structure</a>
 </p>
 
-![SQL](https://img.shields.io/badge/SQL-Data%20Engineering-blue)
+![SQL](https://img.shields.io/badge/SQL-PostgreSQL-blue)
 ![Practice](https://img.shields.io/badge/Practice-Active-brightgreen)
 ![Focus](https://img.shields.io/badge/Focus-Data%20Engineering-orange)
 
@@ -21,53 +22,90 @@
 
 ---
 
-## 📌 Overview
+## 📌 About
 
-**Data Engineering SQL Patterns** is a practical repository for solving SQL problems and building a reusable library of SQL patterns relevant to **Data Engineering, Analytics, ETL, and Data Warehousing**.
+**Data Engineering SQL Patterns** is a practical SQL repository focused on solving SQLPad problems and building reusable SQL patterns for **Data Engineering, Analytics, ETL, and Data Warehousing**.
 
-The problems are sourced primarily from **SQLPad** and are treated as practical exercises rather than isolated coding challenges.
+The goal is not just to solve problems, but to improve the ability to translate:
 
-The goal is to develop the ability to move from:
+```text
+Business Requirement
+        ↓
+SQL Logic
+        ↓
+SQL Pattern
+        ↓
+Query
+        ↓
+Validation
+```
 
-> **Business Requirement → Data Relationships → SQL Pattern → Query → Validation**
+Each problem is stored as an independent `.sql` file with its:
 
-Each problem is documented and solved independently, with emphasis on understanding the underlying SQL technique and how it can be applied to real-world data workloads.
-
----
-
-## 🎯 Objectives
-
-This repository focuses on strengthening the ability to:
-
-* Translate business requirements into SQL logic.
-* Identify relationships between datasets.
-* Choose the appropriate SQL strategy.
-* Write readable and maintainable SQL.
-* Handle `NULL` values and edge cases.
-* Perform analytical transformations.
-* Work with complex joins and subqueries.
-* Use window functions effectively.
-* Solve ranking and Top-N problems.
-* Analyze time-based data.
-* Build reusable SQL patterns for ETL and Data Warehouse workloads.
+* Problem statement
+* Requirements
+* Approach
+* SQL pattern
+* Verified solution
 
 ---
 
-## 🧩 SQL Patterns
+## 📊 Progress
+
+### Overall Progress
+
+**5 / 230 Problems Solved**
+
+**Progress: 2.17%**
+
+| Metric          |  Progress |
+| --------------- | --------: |
+| Problems Solved |     **5** |
+| Easy            |     **5** |
+| Medium          |     **0** |
+| Hard            |     **0** |
+| Status          | 🟢 Active |
+
+---
+
+## 🧩 Problems
+
+|   # | Problem                         | Difficulty | Main Pattern                   |
+| --: | ------------------------------- | :--------: | ------------------------------ |
+| 001 | Top Store for Movie Sales       |   🟢 Easy  | `MAX()` + Scalar Subquery      |
+| 002 | Top 3 Movie Categories by Sales |   🟢 Easy  | `TOP` + `ORDER BY`             |
+| 003 | Top 5 Shortest Movies           |   🟢 Easy  | `ORDER BY` + `LIMIT`           |
+| 005 | Monthly Revenue                 |   🟢 Easy  | `SUM()` + `GROUP BY`           |
+| 007 | Unique Customers Count by Month |   🟢 Easy  | `COUNT(DISTINCT)` + `GROUP BY` |
+
+> Problems are numbered according to their original **SQLPad question number**.
+
+---
+
+## 🧠 SQL Patterns
 
 ### Core SQL
 
 * `SELECT`
 * `WHERE`
 * `ORDER BY`
-* `TOP`
 * `DISTINCT`
+* `LIMIT`
 * `CASE WHEN`
 * Aggregate Functions
+
+### Aggregation
+
 * `GROUP BY`
 * `HAVING`
+* `COUNT()`
+* `COUNT(DISTINCT)`
+* `SUM()`
+* `AVG()`
+* `MIN()`
+* `MAX()`
 
-### JOIN Patterns
+### JOINs
 
 * `INNER JOIN`
 * `LEFT JOIN`
@@ -83,7 +121,7 @@ This repository focuses on strengthening the ability to:
 * Correlated Subqueries
 * `EXISTS`
 * `NOT EXISTS`
-* Common Table Expressions
+* CTEs
 * Nested Queries
 
 ### Window Functions
@@ -96,24 +134,22 @@ This repository focuses on strengthening the ability to:
 * Running Totals
 * Rolling Aggregations
 * Ranking Within Groups
-* Partition-based Analysis
 
 ### Analytical SQL
 
 * Top-N
 * Top-N per Group
-* First / Last Record
 * Duplicate Detection
 * Deduplication
 * Customer Analysis
 * Revenue Analysis
 * Percentage Calculations
-* Cumulative Metrics
 * Growth Analysis
-* Time-based Comparisons
+* Time-based Analysis
 
-### Date & Time Analysis
+### Date & Time
 
+* Date Extraction
 * Daily Aggregation
 * Monthly Aggregation
 * Day-over-Day Analysis
@@ -140,8 +176,6 @@ Data-Engineering-SQL-Patterns/
 └── ...
 ```
 
-Each problem is stored as an independent `.sql` file.
-
 ### Naming Convention
 
 ```text
@@ -158,26 +192,28 @@ Example:
 
 ---
 
-## 🧪 SQL File Structure
+## 📝 SQL File Format
 
-Each solution follows a consistent format:
+Every problem follows the same structure:
 
 ```sql
 /*
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                    DATA ENGINEERING SQL PATTERNS                           ║
 ╠══════════════════════════════════════════════════════════════════════════════╣
-║ Problem    : Problem Name                                                   ║
-║ Source     : SQLPad                                                        ║
-║ Difficulty : Medium                                                        ║
-║ Category   : Window Functions                                               ║
+║ Problem   : Problem Name                                                   ║
+║ Source    : SQLPad                                                         ║
+║ Difficulty: Easy                                                           ║
+║ Category  : Aggregation                                                    ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
+
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 📌 PROBLEM
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Problem statement...
+
 
 🎯 REQUIREMENTS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -186,6 +222,7 @@ Problem statement...
 2. ...
 3. ...
 
+
 🧠 APPROACH
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -193,10 +230,12 @@ Problem statement...
 2. ...
 3. ...
 
+
 🔑 SQL PATTERN
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-SQL Pattern
+GROUP BY + COUNT(DISTINCT)
+
 
 💻 VERIFIED SOLUTION
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -205,124 +244,52 @@ SQL Pattern
 SELECT ...
 ```
 
-This keeps every problem understandable as a standalone SQL exercise and makes the repository useful as a future SQL pattern reference.
+---
+
+## 🔍 Problem-Solving Approach
+
+For each problem, I focus on:
+
+1. Understanding the business requirement.
+2. Identifying what one output row represents.
+3. Identifying the required tables and relationships.
+4. Choosing the appropriate SQL pattern.
+5. Considering `NULL` values and duplicates.
+6. Checking possible edge cases.
+7. Validating the final query.
+
+The main goal is:
+
+> **Requirement → Logic → Pattern → SQL**
 
 ---
 
-## 📊 Progress
+## 🏗️ Data Engineering Relevance
 
-### Overall Progress
+These SQL patterns are directly related to common Data Engineering tasks:
 
-**5 / 230 Problems Solved**
-
-**Progress: 2.17%**
-
-| Metric          |  Progress |
-| --------------- | --------: |
-| Problems Solved |     **5** |
-| Easy            |     **5** |
-| Medium          |     **0** |
-| Hard            |     **0** |
-| Status          | 🟢 Active |
-
-### Completed Problems
-
-|   # | Problem                         | Difficulty | Main Pattern                           |
-| --: | ------------------------------- | ---------- | -------------------------------------- |
-| 001 | Top Store for Movie Sales       | 🟢 Easy    | `MAX()` + Scalar Subquery              |
-| 002 | Top 3 Movie Categories by Sales | 🟢 Easy    | `TOP` + `ORDER BY`                     |
-| 003 | Top 5 Shortest Movies           | 🟢 Easy    | `ORDER BY` + `LIMIT`                   |
-| 005 | Monthly Revenue                 | 🟢 Easy    | `SUM()` + `GROUP BY` + Date Extraction |
-| 007 | Unique Customers Count by Month | 🟢 Easy    | `COUNT(DISTINCT)` + `GROUP BY`         |
+| SQL Pattern             | Data Engineering Use  |
+| ----------------------- | --------------------- |
+| `JOIN`                  | Data Integration      |
+| `GROUP BY`              | Aggregation Pipelines |
+| `COUNT(DISTINCT)`       | Unique Entity Metrics |
+| `EXISTS` / `NOT EXISTS` | Data Validation       |
+| `ROW_NUMBER()`          | Deduplication         |
+| `LAG()` / `LEAD()`      | Change Detection      |
+| CTEs                    | Transformation Logic  |
+| Date Analysis           | Time-based ETL        |
+| Aggregations            | ETL Metrics           |
+| Conditional Logic       | Data Quality          |
 
 ---
 
-## 🏗️ Data Engineering Applications
+## 📚 Related Practice
 
-The SQL patterns practiced in this repository are connected to common Data Engineering workloads.
-
-| SQL Pattern             | Data Engineering Application |
-| ----------------------- | ---------------------------- |
-| `JOIN`                  | Data Integration             |
-| `GROUP BY`              | Aggregation Pipelines        |
-| `EXISTS` / `NOT EXISTS` | Data Validation              |
-| `ROW_NUMBER()`          | Deduplication                |
-| `LAG()` / `LEAD()`      | Change Detection             |
-| Window Functions        | Analytical Transformations   |
-| CTEs                    | Transformation Logic         |
-| Date Analysis           | Incremental Processing       |
-| Top-N                   | Reporting & Analytics        |
-| Aggregations            | ETL Metrics                  |
-| Conditional Logic       | Data Quality Rules           |
-
-The objective is to understand not only **how to write the query**, but also **where the pattern can be useful in a real data pipeline or warehouse**.
-
----
-
-## 🔍 Problem-Solving Workflow
-
-Every problem follows the same general process:
-
-```text
-Business Requirement
-        ↓
-Identify Entities & Relationships
-        ↓
-Understand Expected Output
-        ↓
-Identify SQL Pattern
-        ↓
-Build Query
-        ↓
-Check Edge Cases
-        ↓
-Validate Result
-        ↓
-Document the Pattern
-```
-
-Before writing SQL, I try to answer:
-
-1. What exactly is the business requirement?
-2. What should one output row represent?
-3. Which tables are required?
-4. How are the tables related?
-5. Do I need aggregation?
-6. Do I need a JOIN, Subquery, or CTE?
-7. Would a Window Function simplify the solution?
-8. What happens with `NULL` values?
-9. What happens with duplicates?
-10. Are there edge cases that could change the result?
-
----
-
-## 🧠 Learning Philosophy
-
-The purpose of this repository is **pattern recognition and problem solving**, not query memorization.
-
-For every problem, the goal is to understand:
-
-* Why the solution works.
-* Why a specific SQL strategy was chosen.
-* What edge cases exist.
-* How the pattern could be reused.
-* How the same logic could appear in an ETL or Data Warehouse workflow.
-
-> **Don't just solve the SQL problem — understand the Data Engineering pattern behind it.**
-
----
-
-## 📚 Learning Path
-
-This repository complements my existing SQL practice.
-
-### SQL Foundation
-
-**LeetCode SQL 50**
+### LeetCode SQL 50
 
 Focus:
 
-* Core SQL
+* SQL Fundamentals
 * JOINs
 * Aggregations
 * Subqueries
@@ -330,21 +297,17 @@ Focus:
 * Window Functions
 * Date & Time Analysis
 
-### Advanced Practice
-
-**Data Engineering SQL Patterns**
+### Data Engineering SQL Patterns
 
 Focus:
 
-* Complex SQL
-* Analytical Patterns
-* Advanced Window Functions
+* Practical SQL
+* Analytical SQL
+* Advanced SQL Patterns
 * Real-world Data Problems
-* Reusable SQL Patterns
+* Data Engineering Applications
 
-### Practical Data Engineering
-
-Next step:
+### Next Step
 
 * Large Datasets
 * Data Cleaning
@@ -359,9 +322,9 @@ Next step:
 
 ## 🛠️ Tech Stack
 
-* **SQL**
 * **PostgreSQL**
 * **SQLPad**
+* **SQL**
 * **Microsoft SQL Server / T-SQL**
 * **SSMS**
 * **Git & GitHub**
@@ -374,15 +337,13 @@ Next step:
 
 CS Student & Aspiring Data Engineer
 
-Focused on:
-
 `SQL` • `Python` • `ETL` • `Data Engineering` • `Data Warehousing`
 
 ---
 
 <div align="center">
 
-### 🚀 Building reusable SQL patterns for real-world Data Engineering.
+### 🚀 Building SQL skills through practical Data Engineering problems.
 
 **5 Problems Solved • 2.17% Complete**
 
