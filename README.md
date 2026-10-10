@@ -1,4 +1,4 @@
-<div align="center">
+ <div align="center">
 
 # ⚡ Data Engineering SQL Patterns
 
@@ -54,29 +54,31 @@ Each problem is stored as an independent `.sql` file with its:
 
 ### Overall Progress
 
-**5 / 230 Problems Solved**
+**7 / 230 Problems Solved**
 
-**Progress: 2.17%**
+**Progress: 3.04%**
 
-| Metric          |  Progress |
-| --------------- | --------: |
-| Problems Solved |     **5** |
-| Easy            |     **5** |
-| Medium          |     **0** |
-| Hard            |     **0** |
+| Metric          | Progress |
+| --------------- | -------: |
+| Problems Solved |    **7** |
+| Easy            |    **7** |
+| Medium          |    **0** |
+| Hard            |    **0** |
 | Status          | 🟢 Active |
 
 ---
 
 ## 🧩 Problems
 
-|   # | Problem                         | Difficulty | Main Pattern                   |
-| --: | ------------------------------- | :--------: | ------------------------------ |
-| 001 | Top Store for Movie Sales       |   🟢 Easy  | `MAX()` + Scalar Subquery      |
-| 002 | Top 3 Movie Categories by Sales |   🟢 Easy  | `TOP` + `ORDER BY`             |
-| 003 | Top 5 Shortest Movies           |   🟢 Easy  | `ORDER BY` + `LIMIT`           |
-| 005 | Monthly Revenue                 |   🟢 Easy  | `SUM()` + `GROUP BY`           |
-| 007 | Unique Customers Count by Month |   🟢 Easy  | `COUNT(DISTINCT)` + `GROUP BY` |
+|   # | Problem                         | Difficulty | Main Pattern |
+| --: | ------------------------------- | :--------: | ------------ |
+| 001 | Top Store for Movie Sales       | 🟢 Easy | `MAX()` + Scalar Subquery |
+| 002 | Top 3 Movie Categories by Sales | 🟢 Easy | `TOP` + `ORDER BY` |
+| 003 | Top 5 Shortest Movies           | 🟢 Easy | `ORDER BY` + `LIMIT` |
+| 005 | Monthly Revenue                 | 🟢 Easy | `SUM()` + `GROUP BY` |
+| 007 | Unique Customers Count by Month | 🟢 Easy | `COUNT(DISTINCT)` + `GROUP BY` |
+| 009 | Min and Max Customer Spend      | 🟢 Easy | `CTE` + `SUM()` + `MIN()` / `MAX()` |
+| 010 | Actors' Last Name               | 🟢 Easy | `IN` + `COUNT()` + `GROUP BY` |
 
 > Problems are numbered according to their original **SQLPad question number**.
 
@@ -123,6 +125,7 @@ Each problem is stored as an independent `.sql` file with its:
 * `NOT EXISTS`
 * CTEs
 * Nested Queries
+* Multi-step Aggregation
 
 ### Window Functions
 
@@ -150,6 +153,7 @@ Each problem is stored as an independent `.sql` file with its:
 ### Date & Time
 
 * Date Extraction
+* Date Range Filtering
 * Daily Aggregation
 * Monthly Aggregation
 * Day-over-Day Analysis
@@ -157,6 +161,14 @@ Each problem is stored as an independent `.sql` file with its:
 * First / Last Events
 * Time Differences
 * Consecutive Events
+
+### Filtering & Conditional Logic
+
+* `IN`
+* `BETWEEN`
+* `LIKE`
+* `CASE WHEN`
+* Date-based Filtering
 
 ---
 
@@ -172,6 +184,8 @@ Data-Engineering-SQL-Patterns/
 ├── 003-top-5-shortest-movies.sql
 ├── 005-monthly-revenue.sql
 ├── 007-unique-customers-count-by-month.sql
+├── 009-min-and-max-customer-spend.sql
+├── 010-actors-last-name.sql
 │
 └── ...
 ```
@@ -188,6 +202,8 @@ Example:
 001-top-store-for-movie-sales.sql
 002-top-3-movie-categories-by-sales.sql
 003-top-5-shortest-movies.sql
+009-min-and-max-customer-spend.sql
+010-actors-last-name.sql
 ```
 
 ---
@@ -268,18 +284,18 @@ The main goal is:
 
 These SQL patterns are directly related to common Data Engineering tasks:
 
-| SQL Pattern             | Data Engineering Use  |
+| SQL Pattern | Data Engineering Use |
 | ----------------------- | --------------------- |
-| `JOIN`                  | Data Integration      |
-| `GROUP BY`              | Aggregation Pipelines |
-| `COUNT(DISTINCT)`       | Unique Entity Metrics |
-| `EXISTS` / `NOT EXISTS` | Data Validation       |
-| `ROW_NUMBER()`          | Deduplication         |
-| `LAG()` / `LEAD()`      | Change Detection      |
-| CTEs                    | Transformation Logic  |
-| Date Analysis           | Time-based ETL        |
-| Aggregations            | ETL Metrics           |
-| Conditional Logic       | Data Quality          |
+| `JOIN` | Data Integration |
+| `GROUP BY` | Aggregation Pipelines |
+| `COUNT(DISTINCT)` | Unique Entity Metrics |
+| `EXISTS` / `NOT EXISTS` | Data Validation |
+| `ROW_NUMBER()` | Deduplication |
+| `LAG()` / `LEAD()` | Change Detection |
+| CTEs | Transformation Logic |
+| Date Analysis | Time-based ETL |
+| Aggregations | ETL Metrics |
+| Conditional Logic | Data Quality |
 
 ---
 
@@ -345,6 +361,6 @@ CS Student & Aspiring Data Engineer
 
 ### 🚀 Building SQL skills through practical Data Engineering problems.
 
-**5 Problems Solved • 2.17% Complete**
+**7 Problems Solved • 3.04% Complete**
 
 </div>
