@@ -54,14 +54,14 @@ Each problem is stored as an independent `.sql` file with its:
 
 ### Overall Progress
 
-**7 / 230 Problems Solved**
+**8 / 230 Problems Solved**
 
-**Progress: 3.04%**
+**Progress: 3.48%**
 
 | Metric          | Progress |
 | --------------- | -------: |
-| Problems Solved |    **7** |
-| Easy            |    **7** |
+| Problems Solved |    **8** |
+| Easy            |    **8** |
 | Medium          |    **0** |
 | Hard            |    **0** |
 | Status          | 🟢 Active |
@@ -70,15 +70,16 @@ Each problem is stored as an independent `.sql` file with its:
 
 ## 🧩 Problems
 
-|   # | Problem                         | Difficulty | Main Pattern |
+| # | Problem | Difficulty | Main Pattern |
 | --: | ------------------------------- | :--------: | ------------ |
-| 001 | Top Store for Movie Sales       | 🟢 Easy | `MAX()` + Scalar Subquery |
+| 001 | Top Store for Movie Sales | 🟢 Easy | `MAX()` + Scalar Subquery |
 | 002 | Top 3 Movie Categories by Sales | 🟢 Easy | `TOP` + `ORDER BY` |
-| 003 | Top 5 Shortest Movies           | 🟢 Easy | `ORDER BY` + `LIMIT` |
-| 005 | Monthly Revenue                 | 🟢 Easy | `SUM()` + `GROUP BY` |
+| 003 | Top 5 Shortest Movies | 🟢 Easy | `ORDER BY` + `LIMIT` |
+| 005 | Monthly Revenue | 🟢 Easy | `SUM()` + `GROUP BY` |
 | 007 | Unique Customers Count by Month | 🟢 Easy | `COUNT(DISTINCT)` + `GROUP BY` |
-| 009 | Min and Max Customer Spend      | 🟢 Easy | `CTE` + `SUM()` + `MIN()` / `MAX()` |
-| 010 | Actors' Last Name               | 🟢 Easy | `IN` + `COUNT()` + `GROUP BY` |
+| 009 | Min and Max Customer Spend | 🟢 Easy | `CTE` + `SUM()` + `MIN()` / `MAX()` |
+| 010 | Actors' Last Name | 🟢 Easy | `IN` + `COUNT()` + `GROUP BY` |
+| 011 | Actors' Last Name Ending in 'EN' or 'RY' | 🟢 Easy | `LIKE` + `OR` + `COUNT()` + `GROUP BY` |
 
 > Problems are numbered according to their original **SQLPad question number**.
 
@@ -167,6 +168,8 @@ Each problem is stored as an independent `.sql` file with its:
 * `IN`
 * `BETWEEN`
 * `LIKE`
+* Wildcard Matching (`%` and `_`)
+* `OR` / `AND`
 * `CASE WHEN`
 * Date-based Filtering
 
@@ -186,6 +189,7 @@ Data-Engineering-SQL-Patterns/
 ├── 007-unique-customers-count-by-month.sql
 ├── 009-min-and-max-customer-spend.sql
 ├── 010-actors-last-name.sql
+├── 011-actors-last-name-ending-en-or-ry.sql
 │
 └── ...
 ```
@@ -196,7 +200,7 @@ Data-Engineering-SQL-Patterns/
 XXX-problem-name.sql
 ```
 
-Example:
+Examples:
 
 ```text
 001-top-store-for-movie-sales.sql
@@ -204,6 +208,7 @@ Example:
 003-top-5-shortest-movies.sql
 009-min-and-max-customer-spend.sql
 010-actors-last-name.sql
+011-actors-last-name-ending-en-or-ry.sql
 ```
 
 ---
@@ -296,6 +301,7 @@ These SQL patterns are directly related to common Data Engineering tasks:
 | Date Analysis | Time-based ETL |
 | Aggregations | ETL Metrics |
 | Conditional Logic | Data Quality |
+| `LIKE` | Text Filtering and Pattern Matching |
 
 ---
 
@@ -361,6 +367,6 @@ CS Student & Aspiring Data Engineer
 
 ### 🚀 Building SQL skills through practical Data Engineering problems.
 
-**7 Problems Solved • 3.04% Complete**
+**8 Problems Solved • 3.48% Complete**
 
 </div>
